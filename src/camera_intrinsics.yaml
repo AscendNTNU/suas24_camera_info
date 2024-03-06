@@ -1,0 +1,21 @@
+image_width: 3840
+image_height: 2160
+camera_name: allied
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [2822.8911943184235, 0, 1856.0814587013576, 0, 2818.191669702099, 1098.6022396593369, 0, 0, 1]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [0.04517809521320388, -0.0785156898673245, -0.004609101426830908, -0.009675672882219643, 0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [2829.909912109375, 0, 1814.1163945336302, 0, 0, 2860.387451171875, 1089.4655607205787, 0, 0, 0, 1, 0]
+
