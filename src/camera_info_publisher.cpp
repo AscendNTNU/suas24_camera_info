@@ -21,7 +21,7 @@ class TestCameraInfoPublisher : public rclcpp::Node
         : Node("test_camera_info_publisher"), count_(0)
         {
             //publish
-            publisher_ = this->create_publisher<sensor_msgs::msg::CameraInfo>("test_camera_info", 10);
+            publisher_ = this->create_publisher<sensor_msgs::msg::CameraInfo>("perception/camera_info", 10);
             timer_ = this->create_wall_timer(500ms, std::bind(&TestCameraInfoPublisher::info_callback, this));
         }
 
@@ -30,7 +30,7 @@ class TestCameraInfoPublisher : public rclcpp::Node
             auto message = sensor_msgs::msg::CameraInfo();
 
             //parse the YAML file with intrinsics 
-            YAML::Node config = YAML::LoadFile("src/test_camera_info_publisher/src/camera_intrinsics.yaml");
+            YAML::Node config = YAML::LoadFile("src/suas24_camera_info/src/camera_intrinsics.yaml");
             auto K_temp = config["camera_matrix"]["data"];
             auto D_temp = config["distortion_coefficients"]["data"];
             auto R_temp = config["rectification_matrix"]["data"];
