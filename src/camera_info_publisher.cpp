@@ -66,7 +66,7 @@ class TestCameraInfoPublisher : public rclcpp::Node
                 idx += 1;
             }
 
-            RCLCPP_INFO(this->get_logger(), "Publishing");
+            //RCLCPP_INFO(this->get_logger(), "Publishing");
             publisher_->publish(message);
         }
 
