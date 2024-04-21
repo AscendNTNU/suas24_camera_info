@@ -30,7 +30,7 @@ class TestCameraInfoPublisher : public rclcpp::Node
             auto message = sensor_msgs::msg::CameraInfo();
 
             //parse the YAML file with intrinsics 
-            YAML::Node config = YAML::LoadFile("src/suas24_camera_info/src/arducam_intrinsics.yaml");
+            YAML::Node config = YAML::LoadFile("src/suas24_camera_info/src/20240416_arducam_intrinsics.yaml");
             auto K_temp = config["camera_matrix"]["data"];
             auto D_temp = config["distortion_coefficients"]["data"];
             auto R_temp = config["rectification_matrix"]["data"];
